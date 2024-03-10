@@ -1,0 +1,478 @@
+* {
+    /*не успела доделать 2 блок мэйна и испраить 4 колонку футера,но зато хэдэр и карточки огонь :)
+    а ещё я пол макета вырезала,сори,глаза и мозги вытекают и не успевала,но всё равно красивенько вышло,то что вышло*/
+
+    /*ПОЧЕМУ КАРТОЧКА ОДИН (.aa) СЪЕЗЖАЕТ ОТНОСИТЕЛЬНО ДРУГИХ ТРЁХ БЕЗ МАРДЖИНА??ВСЁ Ж ОДИНАКОВО!*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        }
+    .container{
+        display: grid;
+        width: 100vw;
+        max-height: 100%;
+        grid-template-areas: 
+    "header header header "
+    "main main main"
+    "footer footer footer";
+    grid-template-columns:minmax(min-content, max-content) ;
+    grid-template-rows: 950px 1fr 202px ;
+    padding: 50px 84px;
+    gap: 120px;
+    background-color: #302C42 ;
+    font-family: "Montserrat", sans-serif;
+    color: #FFFFFF;
+    }
+    .button{
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        height: 48px;
+        padding:16px 38px 16px 38px;
+        background-image:linear-gradient(#8176AF,#C0B7E8 );
+        border-radius: 40px ;
+        border: none;
+        color: #343045 ;
+        font-weight: bold;
+        font-size:12px ;
+    }
+    .header{
+        display: grid;
+        grid-area: header;
+        grid-template-areas: 
+        "top_line top_line top_line"
+        "content content content"
+        "down_line down_line down_line";
+        grid-template-columns:minmax(min-content, max-content) ;
+        grid-template-rows:1fr 456px 168px ;
+        gap:103px
+    }
+    .top_line{
+        display: grid;
+        grid-area: top_line;
+        grid-template-areas:"logo nav buttons_header";
+        grid-template-columns: 200px minmax(390px, 1fr) 356px;
+        grid-template-rows: 1fr;
+        gap: 140px;
+    }
+    .logo{
+        display: grid;
+        grid-area: logo;
+    }
+    .nav{
+        display: grid;
+        grid-area: nav;
+        grid-template-areas:"oneap twoap threeap fourap";
+        font-size:12px;
+        justify-content: space-between;
+    }
+    .oneap{
+        display: grid;
+        grid-area: oneap;
+        text-decoration: none;
+    }
+    .twoap{
+        display: grid;
+        grid-area: twoap;
+    }
+    .threeap{
+        display: grid;
+        grid-area: threeap;
+    }
+    .fourap{
+        display: grid;
+        grid-area: fourap;
+    }
+    .buttons_header{
+        display: grid;
+        grid-area: buttons_header;
+        grid-template-areas: "button_one button_two";
+        gap:38px;
+        justify-items: space-between;
+        align-items: start;
+    }
+    .content{
+        display: grid;
+        grid-area: content;
+        grid-template-areas:"content_text image_one";
+        grid-template-columns:1fr 526px;
+        grid-template-rows:1fr;
+    }
+    .content_text{
+        display: grid;
+        grid-area: content_text;
+        grid-template-areas:
+        "hea"
+        "hea2"
+        "nea"
+        "button_center_header";
+        grid-template-columns: 1fr;
+        grid-template-rows: 56px 56px 72px 52px;
+    }
+    .hea{
+        display: grid;
+        grid-template-columns: minmax(max-content,min-content);
+        font-size:40px ;
+        max-height: 56px;
+        max-width: 456px;
+    }
+    .hea2{
+        display: grid;
+        grid-template-columns: minmax(max-content,min-content);
+        font-size:40px ;
+        max-height: 56px;
+        max-width: 456px;
+    }
+    .nea{
+        display: grid;
+        font-size:16px;
+        max-height: 72px;
+        max-width: 450px;
+        margin-top:36px ;
+    }
+    .button_center_header{
+        display: grid;
+        grid-area: button_center_header;
+        grid-template-areas: "button_three shape_one";
+        grid-template-rows: 1fr;
+        grid-template-columns: 216px 52px;
+        gap: 30px;
+        max-width:300px ;
+        max-height:52px ;
+        margin-top:66px ;
+    }
+    .shape_one{
+        display: grid;
+        max-height:50px ;
+        max-width:50px ;
+    }
+    .button_three{
+        display: grid;
+        max-height:50px ;
+        max-width:214px ;
+    }
+    .image_one{
+        display: grid;
+        grid-area: image_one;
+        width: 490px;
+        height: 456px;
+        
+    }
+    .down_line{
+        display: grid;
+        grid-area: down_line;
+        grid-template-areas: "one two three";
+        grid-template-columns: 372px 260px 332px;
+        grid-template-rows: 1fr;
+        gap: 150px;
+        background-image:radial-gradient(#3A3456,#211E2E);
+        border-radius: 90px;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    .one{
+        display: grid;
+        grid-area: one;   
+        height: 70px;
+        grid-template-areas:
+        "may call" 
+        "may num";
+    }
+    .two{
+        display: grid;
+        grid-area: two;
+        height: 70px;
+        grid-template-areas:
+        "may call" 
+        "may num";
+    }
+    .three{
+        display: grid;
+        grid-area:three;
+        height: 70px;
+        grid-template-areas:
+        "may call" 
+        "may num";
+    }
+    .may{
+        display: grid;
+        grid-area: may;
+        width: 60px;
+        height: 60px;
+        align-items: center;
+    }
+    .call{
+            display: grid;
+            grid-area: call;
+            max-height: 30px; ;
+            font-size: 24px;
+    }
+    .num{
+            display: grid;
+            grid-area: num;
+            max-height: 18px;
+            font-size: 14px;
+    }
+    .main{
+        display: grid;
+        grid-area: main;
+        grid-template-areas: 
+        "first first first first"
+        "shapes_block shapes_block shapes_block shapes_block "
+        "cards cards cards cards";
+        grid-template-columns:minmax(min-content, max-content);
+        grid-template-rows: 568px 140px 512px;
+        justify-items: space-between;
+        gap: 70px;
+    }
+    .cards{
+        display: grid;
+        grid-area: cards;
+        gap: 3px;
+        grid-template-areas:"card_one card_two card_three card_four";
+        grid-template-columns:310px 310px 310px 310px ;
+        grid-template-rows: 512px;
+        justify-content: space-evenly;
+    }
+    .a{
+        display: grid;
+        grid-area: a;
+        margin-top: 50px ;
+    }
+    .b{
+        display: grid;
+        grid-area: b;
+        margin-top: 50px ;
+    }
+    .c{
+        display: grid;
+        grid-area: c;
+        margin-top: 50px ;
+    }
+    .d{
+        display: grid;
+        grid-area: d;
+        margin-top: 50px ;
+    }
+    .aa{
+        display: grid;
+        grid-area: aa;
+        grid-template-areas: 
+        "nana"
+        "hachi"
+        "button_five"
+        ;
+        margin-top: 39px;
+        justify-items: center;
+        
+    }
+    .bb{
+        display: grid;
+        grid-area: bb;
+        grid-template-areas: 
+        "nana"
+        "hachi"
+        "button_five"
+        ;
+        justify-items: center;
+    }
+    .cc{
+        display: grid;
+        grid-area: cc;
+        grid-template-areas: 
+        "nana"
+        "hachi"
+        "button_five"
+        ;
+        justify-items: center;
+    }
+    .dd{
+        display: grid;
+        grid-area: dd;
+        grid-template-areas: 
+        "nana"
+        "hachi"
+        "button_five"
+        ;
+        justify-items: center;
+    }
+    .card_one{
+        display: grid;
+        background-image: radial-gradient(#433D60,#211E2E);
+        border-radius: 40px;
+        grid-area: card_one;
+        grid-template-areas: 
+        "a"
+        "aa";
+        grid-template-columns: 1fr;
+        grid-template-rows:220px 250px;
+        justify-items: center;
+        align-items: center;
+    }
+    .nana{
+        display: grid;
+        grid-area: nana;
+        font-size:24px;
+        height:28px ;
+        
+    }
+    .hachi{
+        display: grid;
+        grid-area: hachi;
+        font-size:12px ;
+        margin-top: 38px;
+        height:58px;
+        width:260px ;
+    }
+    .button_five{
+    display: grid;
+    grid-area: button_five;
+    margin-top: 34px;
+    width:154px;
+}
+    .card_two{
+        display: grid;
+        background-image: radial-gradient(#433D60,#211E2E);
+        border-radius: 40px;
+        grid-area: card_two;
+        grid-template-areas: 
+        "b"
+        "bb";
+        grid-template-columns: 1fr;
+        grid-template-rows:220px 250px ;
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+    }
+    .card_three{
+        display: grid;
+        grid-area: card_three;
+        background-image: radial-gradient(#433D60,#211E2E);
+        border-radius: 40px;
+        grid-template-areas: 
+        "c"
+        "cc";
+        grid-template-columns: 1fr;
+        grid-template-rows:220px 250px ;
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+    }
+    .card_four{
+        display: grid;
+        grid-area: card_four;
+        background-image: radial-gradient(#433D60,#211E2E);
+        border-radius: 40px;
+        grid-template-areas: 
+        "d"
+        "dd";
+        grid-template-columns: 1fr;
+        grid-template-rows:220px 250px ;
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+    }
+    .first{
+        display: grid;
+        grid-area: first;
+        grid-template-areas:"image_two about_hydra"
+    }
+    .image_two{
+        display: grid;
+        grid-area: image_two;
+    }
+    .about_hydra{
+        display: grid;
+        grid-area: about_hydra;
+    }
+    .shapes_block{
+        display: grid;
+        grid-area: shapes_block;
+        grid-template-areas:"biggest text_why";
+    }
+    
+    .biggest{
+        display: grid;
+        grid-area: biggest;
+    }
+    .text_why{
+        display: grid;
+        grid-area: text_why;
+    }
+    .footer{
+        display: grid;
+        grid-area: footer;
+        grid-template-areas:"logo_2 nav_f nav_f2 soc";
+        grid-template-rows:1fr;
+        grid-template-columns:200px 134px 110px 294px;
+        justify-content: space-between;
+        font-size: 16px;
+    }
+    .logo_2{
+        display: grid;
+        grid-area: logo_2;
+        height: 200px;
+        justify-content: center;
+    }
+    .nav_f{
+        display: grid;
+        grid-area: nav_f;
+        height: 200px;
+    }
+    .nav_f2{
+        display: grid;
+        grid-area: nav_f2;
+        height: 200px;
+    }
+    .soc{
+        display: grid;
+        grid-area: soc;
+        height: 200px;
+        grid-column: 
+        "ft"
+        "cl"
+        "button_nine";
+        grid-template-columns:1fr;
+        grid-template-rows: 22px 34px 50px;
+    }
+    .cl{
+        display: grid;
+        grid-area: cl;
+        width:286px;
+        height: 32px;
+    }
+    .ft{
+        display: grid;
+        grid-area: ft;
+        width: 206px;
+        height: 20px;
+    }
+    .button_nine{
+        display: grid;
+        grid-area: button_nine;
+        width: 214px;
+        height: 48px;
+    }
+    .button_one{
+        display: grid;
+        grid-area: button_one;
+    }
+    .button_two{
+        display: grid;
+        grid-area: button_two;
+    }
+    .bold_text{
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .light_text{
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: lighter;
+    }
+    .regular_text{
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: normal;
+    }
